@@ -169,3 +169,14 @@ footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; text-align:
   .download { grid-template-columns: 1fr; }
   .nav-links a:not(.dl) { display: none; }
 }
+
+/* ---------- Новости ---------- */
+.news { display: grid; gap: 16px; }
+.post { background: var(--parch); color: var(--ink); border-radius: 10px; padding: 22px 24px; box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+.post.soon { background: linear-gradient(180deg, #f6e8c2, var(--parch)); border: 2px solid var(--gold); }
+.post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 6px; font-size: 13px; color: var(--ink-soft); }
+.tag { background: var(--ink); color: var(--parch); border-radius: 999px; padding: 3px 10px; font-weight: 600; font-size: 12px; letter-spacing: .04em; }
+.post.soon .tag { background: var(--gold-2); color: var(--wood); }
+.post h3 { font-size: 28px; color: var(--ink); margin-bottom: 6px; }
+.post ul { margin: 0; padding-left: 20px; font-size: 15px; }
+.post li { margin: 4px 0; }
