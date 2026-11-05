@@ -1,0 +1,171 @@
+:root {
+  --wood: #1b140f;
+  --wood-2: #261c15;
+  --wood-3: #33261c;
+  --parch: #efe3c7;
+  --parch-2: #e2d2ae;
+  --ink: #2b1d12;
+  --ink-soft: #5a4632;
+  --gold: #e3b25a;
+  --gold-2: #c8913a;
+  --line: #4a3726;
+  --fg: #f1e7d3;
+  --muted: #b9a88d;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--wood);
+  color: var(--fg);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--gold); }
+h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 700; line-height: 1.15; margin: 0; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- Меню ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(27, 20, 15, .92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
+.logo { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 700; color: var(--gold); text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; gap: 4px; overflow-x: auto; margin-left: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a { flex: none; padding: 8px 12px; color: var(--muted); text-decoration: none; font-size: 14px; border-radius: 6px; }
+.nav-links a:hover { color: var(--fg); background: var(--wood-3); }
+.nav-links a.dl { color: var(--wood); background: var(--gold); font-weight: 600; }
+.nav-links a.dl:hover { background: var(--gold-2); }
+
+/* ---------- Обложка ---------- */
+.hero {
+  position: relative;
+  min-height: min(88svh, 760px);
+  display: flex; align-items: flex-end;
+  background: #000 center / cover no-repeat;
+  background-image: linear-gradient(180deg, rgba(27,20,15,.15) 0%, rgba(27,20,15,.35) 45%, var(--wood) 100%), url("img/capital-aerial.jpg");
+}
+.hero .wrap { padding-bottom: 56px; width: 100%; }
+.eyebrow { color: var(--gold); letter-spacing: .32em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px; }
+.hero h1 { font-size: clamp(48px, 9vw, 104px); text-shadow: 0 4px 24px rgba(0,0,0,.6); }
+.hero p.lead { font-size: clamp(17px, 2.2vw, 21px); max-width: 640px; margin: 14px 0 28px; color: #f6eedd; text-shadow: 0 2px 10px rgba(0,0,0,.7); }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px; border-radius: 8px;
+  font-weight: 600; font-size: 16px; text-decoration: none;
+  border: 1px solid var(--gold); color: var(--fg); background: rgba(27,20,15,.55);
+  transition: background .2s, transform .2s;
+}
+.btn:hover { background: var(--wood-3); transform: translateY(-1px); }
+.btn.primary { background: var(--gold); color: var(--wood); border-color: var(--gold); }
+.btn.primary:hover { background: var(--gold-2); }
+.version { font-size: 14px; color: var(--muted); }
+
+/* ---------- Секции ---------- */
+section { padding: 72px 0; }
+section.alt { background: var(--wood-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { max-width: 720px; margin-bottom: 36px; }
+.section-head h2 { font-size: clamp(34px, 5vw, 48px); color: var(--parch); }
+.section-head p { color: var(--muted); margin: 10px 0 0; font-size: 17px; }
+
+/* ---------- Города ---------- */
+.cities { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.city {
+  background: var(--parch); color: var(--ink);
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  display: flex; flex-direction: column;
+}
+.city img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.city .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.city .kind { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-2); font-weight: 600; }
+.city h3 { font-size: 30px; color: var(--ink); }
+.city p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+.city ul { margin: 4px 0 0; padding-left: 18px; color: var(--ink); font-size: 14.5px; }
+
+/* ---------- Возможности ---------- */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feature { background: var(--wood-3); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+.feature .icon { font-size: 28px; line-height: 1; margin-bottom: 12px; }
+.feature h3 { font-size: 24px; color: var(--parch); margin-bottom: 6px; }
+.feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* ---------- Слава ---------- */
+.fame { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tier { background: var(--parch); color: var(--ink); border-radius: 10px; padding: 18px; text-align: center; }
+.tier b { display: block; font-family: "Cormorant Garamond", serif; font-size: 24px; }
+.tier span { display: block; color: var(--ink-soft); font-size: 14px; }
+.tier .disc { font-size: 28px; font-weight: 700; color: var(--gold-2); margin-top: 4px; }
+
+/* ---------- Карта ---------- */
+.maps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.maps figure { margin: 0; }
+.maps img { border-radius: 8px; box-shadow: 0 12px 34px rgba(0,0,0,.5); }
+figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; text-align: center; }
+
+/* ---------- Галерея ---------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.gallery button { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden; }
+.gallery img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; transition: transform .3s; }
+.gallery button:hover img { transform: scale(1.04); }
+.lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.9); display: none; align-items: center; justify-content: center; padding: 16px; cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-height: 90vh; border-radius: 8px; }
+
+/* ---------- Управление ---------- */
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px 28px; }
+.key-row { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+kbd {
+  flex: none; min-width: 44px; text-align: center;
+  padding: 6px 10px; border-radius: 6px;
+  background: var(--parch); color: var(--ink);
+  font-family: Inter, sans-serif; font-weight: 700; font-size: 13px;
+  box-shadow: 0 3px 0 var(--parch-2);
+}
+.key-row span { color: var(--fg); font-size: 15px; }
+
+/* ---------- Шаги ---------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; counter-reset: step; }
+.step { position: relative; background: var(--wood-3); border: 1px solid var(--line); border-radius: 10px; padding: 22px 22px 22px 66px; }
+.step::before {
+  counter-increment: step; content: counter(step);
+  position: absolute; left: 20px; top: 20px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--gold); color: var(--wood);
+  font-weight: 700; display: grid; place-items: center;
+}
+.step h3 { font-size: 22px; color: var(--parch); margin-bottom: 4px; }
+.step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* ---------- Скачать ---------- */
+.download {
+  background: var(--parch); color: var(--ink);
+  border-radius: 14px; padding: clamp(24px, 5vw, 48px);
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,.4);
+}
+.download h2 { font-size: clamp(32px, 5vw, 46px); color: var(--ink); }
+.download p { color: var(--ink-soft); }
+.download .btn { border-color: var(--ink); color: var(--ink); background: transparent; }
+.download .btn.primary { background: var(--ink); color: var(--parch); }
+.download .btn.primary:hover { background: #4a3322; }
+.specs { margin: 0; padding: 0; list-style: none; font-size: 15px; }
+.specs li { padding: 8px 0; border-bottom: 1px solid var(--parch-2); }
+.specs b { color: var(--ink); }
+
+footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+@media (max-width: 760px) {
+  section { padding: 52px 0; }
+  .download { grid-template-columns: 1fr; }
+  .nav-links a:not(.dl) { display: none; }
+}

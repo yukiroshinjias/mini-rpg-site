@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini RPG — четыре города, одна дорога</title>
+  <meta name="description" content="Mini RPG — средневековая RPG с открытым миром: четыре города, шахты и лесоповалы, кузня, задания жителей и кооператив по сети.">
+  <meta property="og:title" content="Mini RPG">
+  <meta property="og:description" content="Четыре города. Шахты, лес, кузня, задания и слава. Играй один или с друзьями.">
+  <meta property="og:image" content="img/capital-aerial.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Mini RPG</a>
+    <div class="nav-links">
+      <a href="#cities">Города</a>
+      <a href="#features">Что делать</a>
+      <a href="#fame">Слава</a>
+      <a href="#map">Карта</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#controls">Управление</a>
+      <a href="#coop">Вместе</a>
+      <a class="dl" href="#download">Скачать</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Средневековая RPG с открытым миром</p>
+    <h1>Mini RPG</h1>
+    <p class="lead">Четыре города, у каждого свои заботы. Добывай руду, руби лес, куй оружие, помогай жителям — и город запомнит тебя.</p>
+    <div class="buttons">
+      <a class="btn primary js-download" href="https://github.com/yukiroshinjias/mini-rpg-releases/releases/latest">Скачать для Windows</a>
+      <a class="btn" href="#cities">Посмотреть мир</a>
+      <span class="version js-version"></span>
+    </div>
+  </div>
+</header>
+
+<section id="cities">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Четыре города</h2>
+      <p>При первом входе ты выбираешь, где жить: там ты появляешься и возрождаешься. У каждого города своя специализация, свой торговец и свои задания. Переселиться можно в мэрии другого города.</p>
+    </div>
+    <div class="cities">
+      <article class="city">
+        <img src="img/capital-aerial.jpg" alt="Столица Эльдгард с высоты: стены, башни, цитадель" loading="lazy">
+        <div class="body">
+          <span class="kind">Столица</span>
+          <h3>Эльдгард</h3>
+          <p>Цитадель с донжоном, рынок на площади, казна, библиотека и казармы. Город на реке с пристанью.</p>
+          <ul><li>Задания — любые</li><li>Торговец продаёт кожу</li><li>Только здесь: «Меч для стражи»</li></ul>
+        </div>
+      </article>
+      <article class="city">
+        <img src="img/mining-aerial.jpg" alt="Шахтёрский город Железный Кряж с высоты" loading="lazy">
+        <div class="body">
+          <span class="kind">Шахтёрский город</span>
+          <h3>Железный Кряж</h3>
+          <p>Рядом рудник с камнем, медью, железом, алюминием и золотом. Мастерские и плавильни.</p>
+          <ul><li>Задания на руду и инструменты</li><li>Торговец продаёт руду</li><li>Только здесь: «Крепь для штольни», «Золотая жила»</li></ul>
+        </div>
+      </article>
+      <article class="city">
+        <img src="img/lumber-aerial.jpg" alt="Лесной город Дубрава с высоты" loading="lazy">
+        <div class="body">
+          <span class="kind">Лесной город</span>
+          <h3>Дубрава</h3>
+          <p>У самого леса — лесоповал, где деревья рубятся и вырастают снова. Лесопилки и плотники.</p>
+          <ul><li>Задания на древесину и ремесло</li><li>Дерево и дешёвая кожа</li><li>Только здесь: «Железо для пилы», «Топоры для артели»</li></ul>
+        </div>
+      </article>
+      <article class="city">
+        <img src="img/port-aerial.jpg" alt="Речной порт Тихая Пристань с высоты" loading="lazy">
+        <div class="body">
+          <span class="kind">Речной порт</span>
+          <h3>Тихая Пристань</h3>
+          <p>Причалы, склады и мост через реку. Сюда приходят баржи с товаром.</p>
+          <ul><li>Задания на торговлю</li><li>Дешёвая кожа, зелья, золото</li><li>Только здесь: «Груз для баржи», «Ремонт причала»</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Чем заняться</h2>
+      <p>Мир собирается из ресурсов: что добыл — то и выковал, что выковал — то и продал или отдал за задание.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="icon">⛏️</div><h3>Шахта</h3><p>Бей рудные камни — выпадает камень и руда. Киркой втрое быстрее. Камни восстанавливаются.</p></div>
+      <div class="feature"><div class="icon">🪓</div><h3>Лесоповал</h3><p>Деревья рубятся и дают древесину, через несколько минут вырастают снова. Топором — быстрее.</p></div>
+      <div class="feature"><div class="icon">⚒️</div><h3>Кузня</h3><p>У наковальни куются мечи, кирки, топоры, ножи и рюкзаки. На точиле меч становится острее — но может и сломаться.</p></div>
+      <div class="feature"><div class="icon">🎒</div><h3>Рюкзаки</h3><p>Четыре рюкзака от 2×2 до 5×5. Кожа — у торговца в гильдии. Снаряжение — в меню на Tab.</p></div>
+      <div class="feature"><div class="icon">📜</div><h3>Задания</h3><p>Доска в гильдии каждого города: собрать, выковать, принести или победить врагов у метки на карте.</p></div>
+      <div class="feature"><div class="icon">🗣️</div><h3>Жители</h3><p>Горожане гуляют по улицам и делятся слухами. Примерно каждый второй разговор — просьба о помощи.</p></div>
+      <div class="feature"><div class="icon">🗺️</div><h3>Карта</h3><p>Нарисованная карта города и всего мира на M — с подписями мест и стрелкой, где ты сейчас.</p></div>
+      <div class="feature"><div class="icon">🤝</div><h3>Кооператив</h3><p>Играй с друзьями по сети: один создаёт сервер, остальные подключаются по IP.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fame">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Слава города</h2>
+      <p>Каждое выполненное задание — с доски или от жителя — прибавляет славы тому городу. Чем выше звание, тем дешевле у его торговца.</p>
+    </div>
+    <div class="fame">
+      <div class="tier"><b>Чужак</b><span>с первого дня</span><div class="disc">0%</div></div>
+      <div class="tier"><b>Знакомый</b><span>3 задания</span><div class="disc">−5%</div></div>
+      <div class="tier"><b>Друг города</b><span>8 заданий</span><div class="disc">−12%</div></div>
+      <div class="tier"><b>Почётный житель</b><span>15 заданий</span><div class="disc">−20%</div></div>
+      <div class="tier"><b>Герой города</b><span>25 заданий</span><div class="disc">−30%</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="map">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Карта мира</h2>
+      <p>Три на три километра: горы со снегом, реки и озёра, руины, деревня, поля и тракты между городами. Карту в игре рисует сам генератор мира.</p>
+    </div>
+    <div class="maps">
+      <figure><img src="img/map-world.jpg" alt="Карта мира на пергаменте" loading="lazy"><figcaption>Весь мир</figcaption></figure>
+      <figure><img src="img/map-capital.jpg" alt="Карта столицы Эльдгард на пергаменте" loading="lazy"><figcaption>Эльдгард и окрестности</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Галерея</h2>
+      <p>Площади, рынки и улицы городов. Нажми на снимок, чтобы открыть крупнее.</p>
+    </div>
+    <div class="gallery">
+      <button><img src="img/capital-plaza.jpg" alt="Площадь Эльдгарда с фонтаном и рынком" loading="lazy"></button>
+      <button><img src="img/port-street.jpg" alt="Рыночный прилавок на площади Тихой Пристани" loading="lazy"></button>
+      <button><img src="img/mining-plaza.jpg" alt="Площадь Железного Кряжа" loading="lazy"></button>
+      <button><img src="img/lumber-plaza.jpg" alt="Площадь Дубравы" loading="lazy"></button>
+      <button><img src="img/capital-street.jpg" alt="Улица Эльдгарда" loading="lazy"></button>
+      <button><img src="img/port-plaza.jpg" alt="Тихая Пристань над площадью" loading="lazy"></button>
+      <button><img src="img/lumber-street.jpg" alt="Улица Дубравы" loading="lazy"></button>
+      <button><img src="img/mining-street.jpg" alt="Улица Железного Кряжа" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="controls">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Управление</h2>
+    </div>
+    <div class="controls">
+      <div class="key-row"><kbd>W A S D</kbd><span>Ходьба, с Shift — бег</span></div>
+      <div class="key-row"><kbd>ЛКМ / J</kbd><span>Удар: враги, рудные камни, деревья</span></div>
+      <div class="key-row"><kbd>Пробел</kbd><span>Прыжок</span></div>
+      <div class="key-row"><kbd>E</kbd><span>Подобрать, поговорить, открыть дверь, кузня, торговец, доска заданий</span></div>
+      <div class="key-row"><kbd>1–4</kbd><span>Взять предмет с пояса в руки</span></div>
+      <div class="key-row"><kbd>G</kbd><span>Выбросить предмет из рук</span></div>
+      <div class="key-row"><kbd>Tab</kbd><span>Снаряжение, рюкзак, слава городов</span></div>
+      <div class="key-row"><kbd>M</kbd><span>Карта города и мира</span></div>
+      <div class="key-row"><kbd>Esc</kbd><span>Закрыть окно или пауза</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="coop">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Играть вместе</h2>
+      <p>Сундуки, лут, шахта и лесоповал общие для всех игроков. Задания, слава и монеты — у каждого свои.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Создать сервер</h3><p>В главном меню — «Создать сервер». В паузе видно твой IP: передай его друзьям.</p></div>
+      <div class="step"><h3>Открыть порт</h3><p>Игра работает через порт 7777 (UDP). Для игры через интернет пробрось его на роутере или используй общую сеть вроде Radmin VPN.</p></div>
+      <div class="step"><h3>Подключиться</h3><p>Друзья выбирают «Подключиться», вводят IP — и появляются в своём родном городе.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="download">
+      <div>
+        <h2>Скачать Mini RPG</h2>
+        <p>Распакуй архив и запусти игру. Лаунчер сам проверит обновления и скачает новую версию, когда она выйдет.</p>
+        <div class="buttons">
+          <a class="btn primary js-download" href="https://github.com/yukiroshinjias/mini-rpg-releases/releases/latest">Скачать для Windows</a>
+          <a class="btn" href="https://github.com/yukiroshinjias/mini-rpg-releases/releases">Все версии</a>
+        </div>
+      </div>
+      <ul class="specs">
+        <li><b>Версия:</b> <span class="js-version-plain">последняя</span></li>
+        <li><b>Система:</b> Windows 10 / 11, 64 бита</li>
+        <li><b>Размер:</b> <span class="js-size">~ несколько сотен МБ</span></li>
+        <li><b>Сеть:</b> одиночная игра или кооператив по IP</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Mini RPG · сделано на Unity · модели KayKit</div>
+</footer>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+
+<script src="script.js"></script>
+</body>
+</html>
